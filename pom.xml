@@ -13,34 +13,43 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AnnunkiGameBook</name>
 	<description>This project is an implementation of a REST API and a terminal application for the gamebook &quot;Expediente Anunnaki&quot; by David Velasco. My interest in creating this application arose after playing the first book and embarking on the second part. I wanted to build something in programming to use the book&apos;s data instead of using paper, pencil, and physical dice.  The application is designed to automate the gamebook experience, allowing users to interact with the story in a digital way.</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<url>https://github.com/AngelLFMorante/AnunnakiGamebook</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+            <comments>Permite distribución gratuita con reconocimiento del autor.</comments>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>angelfernandezmorante</id>
+            <name>Angel Fernandez Morante</name>
+            <email>angellfmorante@gmail.com</email>
+            <organization>Independiente</organization>
+            <organizationUrl>https://github.com/AngelLFMorante</organizationUrl>
+            <roles>
+                <role>Desarrollador</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/AngelLFMorante/AnunnakiGamebook.git</connection>
+        <developerConnection>scm:git:git@github.com:AngelLFMorante/AnunnakiGamebook.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/AngelLFMorante/AnunnakiGamebook</url>
+    </scm>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -63,13 +72,32 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.5.0</version>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
