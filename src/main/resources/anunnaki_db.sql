@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS BasePersonajes (
     fuerza INT8 NOT NULL,
     destreza INT8 NOT NULL,
     percepcion INT8 NOT NULL,
-    personaje_id INT NOT NULL,
-    profesion_id INT NOT NULL,
+    personaje_id BIGINT NOT NULL,
+    profesion_id BIGINT NOT NULL,
     CONSTRAINT fk_personaje FOREIGN KEY (personaje_id) REFERENCES Personajes(id),
     CONSTRAINT fk_profesion FOREIGN KEY (profesion_id) REFERENCES Profesiones(id)
 );

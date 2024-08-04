@@ -52,11 +52,11 @@ public class BasePersonaje {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "personaje_id", nullable = false, unique = true)
-    private Personaje personajeId;
+    private Personaje personaje;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "profesion_id", nullable = false)
-    private Profesion profesionId;
+    private Profesion profesion;
 
     
 }
